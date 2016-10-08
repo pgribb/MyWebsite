@@ -3,6 +3,8 @@ html{
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: #dbf0eb;
 }
 
@@ -20,19 +22,26 @@ header {
 
 /* Navigation Bar Style */
 ul {
-  font-size: 0;
+  background: black;
 }
 
-nav li {
+li {
     display: inline-block;
-    padding: 0px 10px;
-    font-size: 14px;
-    background: black;
-    color: white;
 }
 
-nav li a {
+li a {
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
   color: white;
+}
+
+.active {
+  background: green;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
 }
 
 main {
