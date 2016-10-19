@@ -21,6 +21,11 @@ header {
 }
 
 /* Navigation Bar Style */
+
+nav {
+
+}
+
 ul {
   background: black;
 }
@@ -52,7 +57,6 @@ footer {
   background: #bababa;
   width: 100%;
   height: 50px;
-  position: absolute;
   bottom: 0;
   left: 0;
 }
@@ -61,11 +65,15 @@ footer.home {
   background: none;
 }
 
+.blog, .adventures{
+  border: 2px solid black;
+}
+
 div {
 
 }
 
-#homequote {
+#quote {
 
 }
 
