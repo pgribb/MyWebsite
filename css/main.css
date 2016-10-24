@@ -145,7 +145,7 @@ body.home {
 }
 
 #noHover {
-  display: #;
+  display: none;
   line-height: 150px;
   margin: 0;
   font-size: 4em;
@@ -175,19 +175,51 @@ body.home {
 }
 
 #hover li {
-  border: 1px solid black;
+  line-height: 40px;
+  background: #e0ebe0;
+  border: 3px solid #777;
   border-radius: 10px;
   text-decoration: none;
-  margin: 2%;
-  height: 27.5%;
+  margin: 3px;
+  height: 40px;
 }
 
-#id {
-  display:none;
+#hover li:hover {
+  background: #333;
+  color: white;
+}
+
+#email {
+  display: ;
+  background: #f2f2f2;
+  border: 2px solid #555;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
 }
 
 #phone {
   display: none;
+}
+
+#phone h1 {
+  background: #333;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.5rem;
+  color: #d9d9d9;
+  line-height: 40px;
+  height: 40px;
+  margin: 10px 10px 0 10px;
+}
+
+#phone p {
+  background: #d9d9d9;
+  border-radius: 0 0 10px 10px;
+  font-size: 3rem;
+  color: blue;
+  line-height: 90px;
+  height: 90px;
+  margin: 0 10px 10px 10px;
 }
 
 #social {
