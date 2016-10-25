@@ -145,25 +145,23 @@ body.home {
 }
 
 #noHover {
-  display: none;
   line-height: 150px;
   margin: 0;
   font-size: 4em;
 }
 
-#hover {
-  display: none;
+#onHover {
   position: relative;
 }
 
-#hover > h1 {
+#onHover > h1 {
   line-height: 150px;
   margin: 0;
   font-size: 4em;
   width: 34%;
 }
 
-#hover > ul {
+#onHover > ul {
   list-style-type: none;
   position: absolute;
   top: 0;
@@ -174,7 +172,7 @@ body.home {
   width: 66%;
 }
 
-#hover li {
+#onHover li {
   line-height: 40px;
   background: #e0ebe0;
   border: 3px solid #777;
@@ -184,13 +182,12 @@ body.home {
   height: 40px;
 }
 
-#hover li:hover {
+#onHover li:hover {
   background: #333;
   color: white;
 }
 
 #email {
-  display: ;
   background: #f2f2f2;
   border: 2px solid #555;
   border-radius: 15px;
@@ -199,7 +196,6 @@ body.home {
 }
 
 #phone {
-  display: none;
 }
 
 #phone h1 {
@@ -223,5 +219,8 @@ body.home {
 }
 
 #social {
+}
+
+.hidden {
   display: none;
 }
