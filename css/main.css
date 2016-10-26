@@ -132,6 +132,15 @@ body.home {
 }
 
 /*Contact page style*/
+.reachOut {
+  background: #d9d9d9;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+}
+
 #contact {
   border: 5px solid #e0ebe0;
   border-radius: 20px;
@@ -141,7 +150,7 @@ body.home {
   text-align: center;
   height:150px;
   width: 400px;
-  margin: 100px auto;
+  margin: 10px auto;
 }
 
 #noHover {
