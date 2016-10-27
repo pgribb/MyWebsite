@@ -227,7 +227,12 @@ body.home {
   margin: 0 10px 10px 10px;
 }
 
-#social {
+#social img {
+    border: 2px solid white;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    margin: 45px 10px;
 }
 
 .hidden {
