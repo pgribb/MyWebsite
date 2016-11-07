@@ -1,5 +1,5 @@
 body {
-  background: #f2f2f2;
+  background: #bfbfbf;
   margin: 0;
   padding: 0;
 }
@@ -45,13 +45,22 @@ nav li:hover:not(.active) {
 }
 
 .wrapper {
-  background: white;
+  background: #d9d9d9;
   width: 800px;
   position: fixed;
   top: 70px;
   bottom: 20px;
   left: 50%;
   margin-left: -400px;
+}
+
+.pageHeader {
+  background: #999;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+  padding: .5em;
 }
 
 footer {
@@ -74,7 +83,7 @@ footer p {
   line-height: 20px;
 }
 
-/*Home page style*/
+/* Home page style */
 body.home {
   background: url(../images/SantaBarbara.jpg) no-repeat center fixed;
   -webkit-background-size: cover;
@@ -91,7 +100,7 @@ body.home {
 
 }
 
-/*Blog/Adventure page style*/
+/* Blog/Adventure page style */
 .blog, .adventures{
   background: #dbf0eb;
   display: inline-block;
@@ -131,16 +140,13 @@ body.home {
   padding: 8px;
 }
 
-/*Contact page style*/
-.reachOut {
-  background: #d9d9d9;
-  color: #ffffff;
-  font-size: 1.5em;
-  text-align: center;
-  margin: 0;
-  padding: 30px;
+/* Projects page style */
+.project {
+  border: 2px solid black;
+  padding: 10px;
 }
 
+/* Contact page style */
 #contact {
   border: 5px solid #e0ebe0;
   border-radius: 20px;
@@ -150,7 +156,7 @@ body.home {
   text-align: center;
   height:150px;
   width: 400px;
-  margin: 10px auto;
+  margin: 30px auto;
 }
 
 #noHover {
@@ -170,7 +176,7 @@ body.home {
   width: 34%;
 }
 
-#onHover > ul {
+#onHover ul {
   list-style-type: none;
   position: absolute;
   top: 0;
