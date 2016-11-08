@@ -1,28 +1,25 @@
-body {
-  background: #b2b2b2;
+body, header, nav, main, ul, li, h1, h2, h3 p, a, img {
   margin: 0;
   padding: 0;
 }
 
+body {
+  background: #b2b2b2;
+}
+
 header {
   height: 70px;
-  }
+}
 
 header h1 {
   height: 40px;
   background: #2d6c5d;
   color: white;
   text-align: center;
-  margin: 0;
 }
 
 nav {
   background: #333;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 nav li {
@@ -59,7 +56,6 @@ nav li:hover:not(.active) {
   color: white;
   font-size: 1.5em;
   text-align: center;
-  margin: 0;
   padding: .5em;
 }
 
@@ -73,13 +69,7 @@ footer {
   left: 0;
 }
 
-footer.home {
-  background: none;
-}
-
 footer p {
-  margin: 0;
-  padding: 0;
   line-height: 20px;
 }
 
@@ -92,12 +82,32 @@ body.home {
   background-size: cover;
 }
 
-.home h1 {
+.home header h1 {
   background: none;
 }
 
-#quote {
+article {
+  background: white;
+}
 
+.OTW {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  height: 30px;
+}
+
+.about {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  bottom: 50%;
+  width: 30px;
+}
+
+footer.home {
+  background: none;
+  color: #111;
 }
 
 /* Blog/Adventure page style */
@@ -111,7 +121,6 @@ body.home {
   width: 49%;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: 0;
   margin: 0.5% 0;
 }
 
@@ -127,7 +136,6 @@ body.home {
   text-align: center;
   text-decoration: underline;
   padding: 10px;
-  margin: 0;
 }
 
 .post {
@@ -165,7 +173,6 @@ body.home {
   text-decoration: underline;
   height: 50px;
   width: 246px;
-  margin: 0;
 }
 
 .project p {
@@ -188,7 +195,6 @@ body.home {
   line-height: 50px;
   position: relative;
   bottom: 100px;
-  margin: 0;
 }
 
 .projectLink li {
@@ -209,7 +215,6 @@ body.home {
 .projectLink h2 {
   color: white;
   font-size: 1em;
-  margin: 0;
   line-height: 50px;
 }
 
@@ -238,7 +243,6 @@ body.home {
 
 #onHover > h1 {
   line-height: 150px;
-  margin: 0;
   font-size: 4em;
   width: 34%;
 }
@@ -249,8 +253,6 @@ body.home {
   top: 0;
   bottom: 0;
   right: 0;
-  margin: 0;
-  padding: 0;
   width: 66%;
 }
 
