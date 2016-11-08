@@ -150,7 +150,7 @@ body.home {
   width: 250px;
   line-height: 46px;
   margin: 10px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .project:hover {
@@ -169,13 +169,25 @@ body.home {
 }
 
 .project p {
-
+  border-radius: 5px;
+  background: #8bc1b4;
+  color: black;
+  line-height: 1.5em;
+  position: relative;
+  left: 246px;
+  bottom: 50px;
+  height: 80px;
+  width: 510px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .projectLink {
   height: 50px;
   width: 246px;
   line-height: 50px;
+  position: relative;
+  bottom: 100px;
   margin: 0;
 }
 
