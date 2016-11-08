@@ -1,5 +1,5 @@
 body {
-  background: #bfbfbf;
+  background: #b2b2b2;
   margin: 0;
   padding: 0;
 }
@@ -142,8 +142,63 @@ body.home {
 
 /* Projects page style */
 .project {
-  border: 2px solid black;
-  padding: 10px;
+  background-color: #333;
+  border: 2px solid #999;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 50px;
+  width: 250px;
+  line-height: 46px;
+  margin: 10px;
+  transition: all 0.5s ease;
+}
+
+.project:hover {
+  height: 100px;
+  width: 776px;
+}
+
+.project h1 {
+  color: #b38600;
+  font-size: 1.25em;
+  text-align: center;
+  text-decoration: underline;
+  height: 50px;
+  width: 246px;
+  margin: 0;
+}
+
+.project p {
+
+}
+
+.projectLink {
+  height: 50px;
+  width: 246px;
+  line-height: 50px;
+  margin: 0;
+}
+
+.projectLink li {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  text-align: center;
+}
+
+.projectLink img {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 28px;
+  width: auto;
+  position: relative;
+  top: 10px;
+}
+
+.projectLink h2 {
+  color: white;
+  font-size: 1em;
+  margin: 0;
+  line-height: 50px;
 }
 
 /* Contact page style */
@@ -152,7 +207,7 @@ body.home {
   border-radius: 20px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   background: #b38600;
-  color: #black;
+  color: #333;
   text-align: center;
   height:150px;
   width: 400px;
