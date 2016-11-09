@@ -1,9 +1,6 @@
 # ignore these paths when adding or checking status
 
 
-*.jpg
-*.jpeg
-*.png
-*.gif
+
 
 *.mp3
