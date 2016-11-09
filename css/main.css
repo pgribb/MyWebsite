@@ -1,10 +1,10 @@
-body, header, nav, main, ul, li, h1, h2, h3 p, a, img {
+body, header, nav, main, footer, ul, li, h1, h2, h3, p, a, img {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #b2b2b2;
+  background: #d9d9d9;
 }
 
 header {
@@ -20,17 +20,19 @@ header h1 {
 
 nav {
   background: #333;
+  height: 30px;
+  line-height: 30px;
 }
 
 nav li {
   display: inline-block;
-  padding: 6px 15px;
 }
 
 nav a {
   text-align: center;
   text-decoration: none;
   color: white;
+  padding: 6.5px 15px;
 }
 
 .active {
@@ -42,7 +44,7 @@ nav li:hover:not(.active) {
 }
 
 .wrapper {
-  background: #d9d9d9;
+  background: #dbf0eb;
   width: 800px;
   position: fixed;
   top: 70px;
@@ -86,26 +88,74 @@ body.home {
   background: none;
 }
 
-article {
-  background: white;
+.home article {
+  position: absolute;
+  top: 70px;
 }
 
-.OTW {
-  position: absolute;
-  right: 0;
-  width: 40%;
+.home article li {
+  display: inline-block;
   height: 30px;
+  line-height: 30px;
+}
+
+.home article a {
+  /*border: 1px solid white;*/
+  display: block;
+  background: #2d6c5d;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+}
+
+.home article a:hover {
+  background: black;
 }
 
 .about {
-  position: absolute;
-  left: 0;
-  top: 25%;
-  bottom: 50%;
-  width: 30px;
+
 }
 
-footer.home {
+.OTW {
+  left: 50%;
+  margin-left: -150px;
+}
+
+.OTW ul {
+  border-left: 5px solid #333;
+  border-right: 5px solid #333;
+  width: 300px;
+}
+
+.OTW h1 {
+  border-left: 5px solid #333;
+  border-right: 5px solid #333;
+  /*border-bottom: 5px solid #333;*/
+  background: #f2f2f2;
+  font-size: 1.2em;
+  text-align: center;
+  width: 300px;
+  padding: 5px 0;
+}
+
+.content {
+  border-left: 5px solid #333;
+  border-right: 5px solid #333;
+  border-bottom: 5px solid #333;
+  background: #dbf0eb;
+  padding: 15px;
+}
+
+.borderSection {
+  background: #333;
+  height: 5px;
+  width: 240.953px;
+  position: absolute;
+  left: 305px;
+}
+
+.home footer {
   background: none;
   color: #111;
 }
