@@ -1,6 +1,6 @@
 //contact button functionality
 
-var contactBox = document.getElementById("contact");
+var contactBox = document.getElementById('contact');
 var defaultView = document.getElementById('noHover');
 var hoverView = document.getElementById('onHover');
 var emailView = document.getElementById('email');
@@ -27,8 +27,8 @@ function toggleContactMenu () {
     //reset height (incase emailView was shown)
     contactBox.style.height = "";
 
-    document.removeEventListener('mouseover', goDefault);
-    document.removeEventListener('click', goDefault);
+    document.removeEventListener('mouseover', isOutsideContactBox);
+    document.removeEventListener('click', isOutsideContactBox);
   }
 
   function isOutsideContactBox (e) {

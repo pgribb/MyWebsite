@@ -23,33 +23,33 @@
     </header>
 
     <main>
-      <article class="about">
+      <article id="about">
         <li><a href="#">About Me</a></li>
       </article>
 
-      <article class="OTW">
-        <ul class="">
-          <li><a href="#">Pic -</a>
-          <li><a href="#">Song -</a>
-          <li><a href="#">Quote -</a>
+      <article id="otw">
+        <ul>
+          <li class="potw"><a href="#">Pic -</a>
+          <li class="sotw"><a href="#">Song -</a>
+          <li class="qotw"><a href="#">Quote -</a>
         </ul>
 
-        <h1>Of - The - Week:</h1>
+        <h1 id="otwHeader">Of - The - Week:</h1>
 
-        <div class="borderSection">
+        <div id="borderSection">
         </div>
 
-        <div class="content">
-          <div class="potw">
+        <div id="otwContent">
+          <div class="potw hidden">
             <img id="pic" src="images/PotW/Glare.JPG" alt="PicOfTheWeek" />
           </div>
 
-          <div class="sotw">
+          <div class="sotw hidden">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/g3hBYTkI-sE" frameborder="0" allowfullscreen></iframe>
           </div>
 
           <div class="qotw">
-            <p id="quote">
+            <p>
               “Always forgive your enemies; nothing annoys them so much.” ― Oscar Wilde
             </p>
           </div>
@@ -60,5 +60,7 @@
     <footer>
       <p>&copy; 2016, LetsGo.</p>
     </footer>
+
+    <script type="text/javascript" src="js/otw.js"></script>
   </body>
 </html>

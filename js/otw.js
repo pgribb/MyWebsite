@@ -1,40 +1,54 @@
 //contact button functionality
 
-var contactBox = document.getElementById("contact");
-var defaultView = document.getElementById('noHover');
-var hoverView = document.getElementById('onHover');
-var emailView = document.getElementById('email');
-var phoneView = document.getElementById('phone');
-var socialView = document.getElementById('social');
-var contactOptions = hoverView.getElementsByTagName('li');
+var otw = document.getElementById('otw');
+var otwType = otw.children[0].getElementsByTagName('li');
+var otwHeader = document.getElementById('otwHeader');
+var otwContent = document.getElementById('otwContent')
+var contentToToggle = otw.children;
 
-defaultView.addEventListener('mouseover', toggleContactMenu);
+toggleContent(contentToToggle, otwType);
 
-function toggleContactMenu () {
-  document.addEventListener('mouseover', isOutsideContactBox);
-
-  defaultView.classList.add("hidden");
-  hoverView.classList.remove("hidden");
-
-  //upon un-hovering or clicking outside, the contact-box goes back to original view
-  function goDefault () {
-    var contactDivs = contactBox.getElementsByTagName('div');
-    for (var i = 0; i < contactDivs.length; i++) {
-      contactDivs[i].classList.add("hidden");
-    }
-    defaultView.classList.remove("hidden");
-
-    //reset height (incase emailView was shown)
-    contactBox.style.height = "";
-
-    document.removeEventListener('mouseover', goDefault);
-    document.removeEventListener('click', goDefault);
+function toggleContent (contentToTog, contentType) {
+  //adds click listener to li's for content nav
+  for (var i = 0; i < contentType.length; i++) {
+    contentType[i].addEventListener('click', revealContent);
   }
 
-  function isOutsideContactBox (e) {
+  //reveals the content type of whichever button was clicked
+  function revealContent() {
+    var correspondingClass = this.classList[0];
+    var contentToReveal = document.getElementsByClassName(correspondingClass)[1];
+    console.log(contentToReveal.classList)
+
+    var correspondingDiv = [];
+    for (var i = 0; i < contentType.length; i++) {
+      correspondingDiv.push(document.getElementsByClassName(contentType[i].classList[0])[1]);
+
+      if (correspondingDiv[i].classList[1] !== "hidden" && correspondingDiv[i].classList[1] !== contentToReveal) {
+        correspondingDiv[i].classList.add("hidden");
+      }
+    }
+    contentToReveal.classList.remove("hidden");
+
+    document.addEventListener('click', isOutsideContentToTog);
+  }
+
+  //upon clicking outside, the conent goes to defaultView
+  function goDefault (toHide) {
+    console.log("clicked outsied");
+    for (var i = 2; i < toHide.length; i++) {
+      toHide[i].classList.add("hidden");
+    }
+    // otwHeader.style.border-bottom = "5px solid #333";
+
+    document.removeEventListener('click', isOutsideContentToTog);
+  }
+
+  // Checks if the mouse target is in any element outside contentToTog
+  function isOutsideContentToTog (e) {
     var node = e.target
     while (node !== document) {
-      if ((node === contactBox)) {
+      if ((node === contentToTog[0] || node === contentToTog[1] || node === contentToTog[2] || node === contentToTog[3])) {
         return;
       }
       else {
@@ -42,30 +56,6 @@ function toggleContactMenu () {
       }
     }
 
-    goDefault ();
-  }
-
-  //adds click listener to li's within onHover id
-  for (var i = 0; i < contactOptions.length; i++) {
-    contactOptions[i].addEventListener('click', revealInfo);
-  }
-
-  //reveals the contact info of whichever button was clicked
-  function revealInfo() {
-    document.removeEventListener('mouseover', isOutsideContactBox);
-    document.addEventListener('click', isOutsideContactBox);
-
-    onHover.classList.add("hidden");
-
-    if (this === contactOptions[0]) {
-      emailView.classList.remove("hidden");
-      contactBox.style.height = '380px'; //resizes contact box to fit email form
-    }
-    else if (this === contactOptions[1]) {
-      phoneView.classList.remove("hidden");
-    }
-    else if (this === contactOptions[2]) {
-      socialView.classList.remove("hidden");
-    }
+    goDefault (contentToTog);
   }
 };
