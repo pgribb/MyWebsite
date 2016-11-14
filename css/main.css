@@ -123,8 +123,17 @@ body.home {
   color: black;
 }
 
-#about {
+#aboutContent {
+  border: 5px solid #333;
+  background: #f2f2f2;
 
+  width: 400px;
+  padding: 10px;
+}
+
+#resume {
+  color: blue;
+  cursor: pointer;
 }
 
 #about a {
