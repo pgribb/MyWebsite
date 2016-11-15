@@ -1,13 +1,31 @@
-//contact button functionality
+var about = document.getElementById('about');
+var aboutButton = about.children[0].getElementsByTagName('li');
+var aboutContent = document.getElementById('aboutContent');
+var aboutChildren = about.children;
 
 var otw = document.getElementById('otw');
 var otwType = otw.children[0].getElementsByTagName('li');
 var otwHeader = document.getElementById('otwHeader');
 var otwContent = document.getElementById('otwContent')
-var contentToToggle = otw.children;
+var otwChildren = otw.children;
 
+aboutDefault();
 otwDefault();
-toggleContent(contentToToggle, otwType, otwDefault);
+
+toggleContent(aboutChildren, aboutButton, aboutDefault);
+toggleContent(otwChildren, otwType, otwDefault);
+
+function aboutDefault() {
+  aboutContent.classList.add("hidden");
+}
+
+function aboutReveal(clicked) {
+  var correspondingClass = clicked.classList[0];
+  var contentToReveal = document.getElementsByClassName(correspondingClass)[1];
+
+  contentToReveal.classList.remove("hidden");
+}
+
 
 // gets called by goDefault to reset the of-the-week window
 function otwDefault() {
@@ -22,18 +40,18 @@ function otwDefault() {
   otwHeader.style.borderBottom = "5px solid #333";
 
   // hide the content types and the containing div
-  for (var i = 0; i < contentToToggle[3].children[i].length; i++) {
-    contentToToggle[3].children[i].classList.add("hidden");
+  for (var i = 0; i < otwChildren[3].children[i].length; i++) {
+    otwChildren[3].children[i].classList.add("hidden");
   }
-  contentToToggle[2].classList.add("hidden");
-  contentToToggle[3].classList.add("hidden");
+  otwChildren[2].classList.add("hidden");
+  otwChildren[3].classList.add("hidden");
 }
-
+// gets called by revealContent to show the selected content in the of-the-week window
 function otwReveal(clicked) {
   // first remove the border-bottom and make sure the content's container div is displayed
   otwHeader.style.borderBottom = "";
   otwContent.classList.remove("hidden");
-  contentToToggle[2].classList.remove("hidden");
+  otwChildren[2].classList.remove("hidden");
 
   // changes otw nav bar bases on what is displayed
   for(var i = 0; i < otwType.length; i++) {
@@ -71,8 +89,8 @@ function otwReveal(clicked) {
   contentToReveal.classList.remove("hidden");
 
   // properly sizes the top border of the content div based on what is displayed
-  var borderTopWidth = otw.offsetWidth - contentToToggle[1].offsetWidth;
-  contentToToggle[2].style.width = borderTopWidth + "px";
+  var borderTopWidth = otw.offsetWidth - otwChildren[1].offsetWidth;
+  otwChildren[2].style.width = borderTopWidth + "px";
 }
 
 function toggleContent (contentToTog, contentType, goDefaultFn) {
@@ -92,12 +110,17 @@ function toggleContent (contentToTog, contentType, goDefaultFn) {
 
   //reveals the content type of whichever button was clicked
   function revealContent() {
-    otwReveal(this);
+    if (contentType === otwType) {
+      otwReveal(this);
+    }
+    else if (contentType === aboutButton) {
+      aboutReveal(this);
+    }
 
     document.addEventListener('click', isOutsideContentToTog);
   }
 
-  //upon clicking outside, the conent goes to defaultView
+  //upon clicking outside, the content goes to defaultView
   function goDefault () {
     goDefaultFn();
 

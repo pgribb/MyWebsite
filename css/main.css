@@ -3,6 +3,10 @@ body, header, nav, main, footer, div, ul, li, h1, h2, h3, p, a, img {
   padding: 0;
 }
 
+.clear {
+  clear: both;
+}
+
 body {
   background: #d9d9d9;
 }
@@ -103,7 +107,7 @@ body.home {
   line-height: 30px;
 }
 
-.home article a {
+.home .jsButton {
   display: block;
   border-bottom: 1px solid #333;
   background: #2d6c5d;
@@ -113,7 +117,7 @@ body.home {
   width: 100px;
 }
 
-.home article a:hover:not(.currentSelection) {
+.home .jsButton:hover:not(.currentSelection) {
   background: black;
 }
 
@@ -125,18 +129,28 @@ body.home {
 
 #aboutContent {
   border: 5px solid #333;
+  border-left: none;
   background: #f2f2f2;
-
-  width: 400px;
+  position: relative;
+  top: 50px;
+  width: 400px  ;
   padding: 10px;
 }
 
-#resume {
-  color: blue;
-  cursor: pointer;
+#aboutContent img {
+  border: 2px solid black;
+  float: left;
+  height: 200px;
+  width: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
-#about a {
+#resume {
+
+}
+
+#about .jsButton {
   border-right: 5px solid #333;
   border-bottom: 5px solid #333;
 }
